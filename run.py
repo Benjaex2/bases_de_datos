@@ -1,6 +1,4 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-
-
 from app import app
-app.run(debug=True)
+import os
+app.secret_key = os.urandom(12)
+app.run(debug=True, host ="0.0.0.0", port = 6226)
