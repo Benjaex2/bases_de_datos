@@ -181,7 +181,7 @@ def carro():
 			id_pedidos = id_pedidos[0][0]
 
 			sql = """
-			select pedidos.id, estado, nombre, talla, cantidad, monto from pedidos, productos where pedidos.id = %s and and cod_producto = codigo
+			select pedidos.id, estado, nombre, talla, cantidad, monto from pedidos, productos where pedidos.id = %s and cod_producto = codigo
 			"""%(id_pedidos)
 			cur.execute(sql)
 			post = cur.fetchall()
