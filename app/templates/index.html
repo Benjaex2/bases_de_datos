@@ -1,0 +1,84 @@
+  
+  {% extends "base.html" %}
+  {% block content %}
+
+   <div class="container">
+
+        <div class="row">
+
+            <!-- Blog Entries Column -->
+            <div class="col-md-8">
+
+                <h1 class="page-header">
+                   Destacados
+                                    </h1>
+
+                <!-- First Blog producto -->
+                
+                <ul class="container" width="200">
+                {% for producto in productos %}
+                <li><img  class="img-responsive" src="http://via.placeholder.com/200x300" width="200" height="300" alt="" /><br> 
+                    <h3><a href="/producto/{{producto[0]}}">{{producto[1]}}</a></h3>
+                    <p>Precio Normal ${{producto[2]}}</p>
+                    <p>Precio Oferta ${{producto[3]}}</p>
+                    <br>
+                </li>
+               
+                {% endfor %}
+                </ul>
+            
+    
+
+            </div>
+
+            <!-- Blog Sidebar Widgets Column -->
+            <div class="col-md-4">
+
+  
+
+           <!-- Side Widget Well -->
+
+                <!-- Blog Categories Well -->
+                <div class="well">
+                    <h4>Categorias</h4>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <ul class="list-unstyled">
+
+                                {% for categoria in categorias %}
+                                <li><a href="/categoria/{{categoria[0]}}">{{categoria[1]}}</a>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                      
+                        <!-- /.col-lg-6 -->
+                    </div>
+                    <!-- /.row -->
+                </div>
+
+                
+
+       
+
+            </div>
+
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Bases de datos 2017</p>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+        </footer>
+
+    </div>
+
+ {% endblock %}

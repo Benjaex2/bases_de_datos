@@ -1,0 +1,99 @@
+  
+  {% extends "base.html" %}
+  {% block content %}
+    <div class="container">
+
+        <div class="row">
+
+            <!-- Blog Post Content Column -->
+            <div class="col-lg-8">
+
+                <!-- Blog Post -->
+
+                <!-- Nombre Producto -->
+                <h1>Compras</h1>
+
+                <!-- Author -->
+
+                <hr>
+
+                <!-- Date/Time -->
+
+                <!-- Preview Image -->
+                <img class="img-responsive" src="http://placehold.it/150x250" alt="">
+
+                <hr>
+
+                <!-- Post Content -->
+                <p class="lead">{{post[2]}}</p>
+
+                <hr>
+
+                <p>
+                    Talla:  {{post[3]}}
+
+                </p>
+
+                <p>
+                    Cantidad:    {{post[4]}} 
+                </p>
+
+                <p>
+                    Monto:    ${{post[5]}}
+                </p>
+
+                <p>
+                    Estado:    {{post[1]}}
+                </p>
+                <!-- Blog Comments -->
+
+                <!-- Comments Form -->
+                
+
+                <hr>
+
+            <!-- Blog Sidebar Widgets Column -->
+            <div class="col-md-4">
+
+
+
+                <!-- Blog Categories Well -->
+                <div class="well">
+                    <h4>Categorias que lo contiene :</h4>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <ul class="list-unstyled">
+                              
+                                <li><a href="/aumentar">Aumentar</a>
+                                </li>
+                                <li><a href="/borrar">Borrar</a>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                    <!-- /.row -->
+                </div>
+
+  
+
+            </div>
+
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Bases de datos 2017</p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </footer>
+
+    </div>
+
+     {% endblock %}

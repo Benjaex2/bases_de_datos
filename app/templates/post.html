@@ -1,0 +1,119 @@
+  
+  {% extends "base.html" %}
+  {% block content %}
+    <div class="container">
+
+        <div class="row">
+
+            <!-- Blog Post Content Column -->
+            <div class="col-lg-8">
+
+                <!-- Blog Post -->
+
+                <!-- Nombre Producto -->
+                <h1>{{post[1]}}</h1>
+
+                <!-- Author -->
+
+                <hr>
+
+                <!-- Date/Time -->
+
+                <!-- Preview Image -->
+                <img class="img-responsive" src="http://placehold.it/300x500" alt="">
+
+                <hr>
+
+                <!-- Post Content -->
+                <p class="lead">{{post[2]}}</p>
+
+                <hr>
+
+                <p>
+                    Precio:   ${{post[3]}}
+
+                </p>
+
+                <p>
+                    Descuento:   ${{post[4]}} 
+                </p>
+
+                <p>
+                    Precio final:   ${{post[5]}}
+                </p>
+                <!-- Blog Comments -->
+
+                <!-- Comments Form -->
+                
+
+                <hr>
+                <div style="margin-top: 1%" class="w3-container">
+                <form method="post" action="/compras/{{post[0]}}">
+                  <div style= "margin-bottom: 2%" class="form-group">
+                      <label for="talla">Elija la talla:</label><br>
+                      <select class="form-control" name= "talla" id="talla">
+                        
+                            <option>S</option>
+                            <option>M</option>
+                            <option>L</option>
+                            <option>XL</option>
+                        
+                      </select>
+            </div>
+
+  <input type="submit" class="btn btn-default" value="Comprar"/>
+</form> 
+</div>
+
+
+                <!-- Posted Comments -->
+
+            
+
+            </div>
+
+            <!-- Blog Sidebar Widgets Column -->
+            <div class="col-md-4">
+
+
+
+                <!-- Blog Categories Well -->
+                <div class="well">
+                    <h4>Categorias que lo contiene :</h4>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <ul class="list-unstyled">
+                              
+                                {% for categoria in categorias %}
+                                <li><a href="/categoria/{{categoria[0]}}">{{categoria[1]}}</a>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                        
+                    </div>
+                    <!-- /.row -->
+                </div>
+
+  
+
+            </div>
+
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Bases de datos 2017</p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </footer>
+
+    </div>
+
+     {% endblock %}
